@@ -1,0 +1,104 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: rgb(95, 158, 160);
+  background-image: url(../images/1.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-color: #cccccc;
+}
+ul {
+  margin: 0;
+  padding: 10px 50px;
+  list-style: none;
+}
+h3 {
+  text-align: center;
+}
+.container {
+  position: relative;
+}
+a {
+  text-decoration: none;
+  color: rgb(235, 117, 20);
+}
+.goBack {
+  margin-left: 50px;
+  margin-top: 0;
+}
+
+#lifeContent {
+  position: absolute;
+  width: 800px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1000;
+  opacity: 0.7;
+}
+
+li {
+  display: flex;
+  margin: 20px 0;
+}
+
+label,
+input {
+  display: block;
+  float: left;
+  height: 46px;
+  font-size: 24px;
+  box-sizing: border-box;
+  color: #333;
+}
+
+label {
+  width: 200px;
+  line-height: 46px;
+  margin-right: 30px;
+  text-align: left;
+}
+
+select,
+input {
+  width: 320px;
+  padding: 8px;
+  font-size: 24px;
+  line-height: 1;
+  outline: none;
+  position: relative;
+}
+
+button {
+  text-align: center;
+  height: 46px;
+  width: 100px;
+  font-size: 24px;
+  border: none;
+  margin-top: -20px;
+}
+
+#calculate {
+  color: #fff;
+  background-color: rgb(3, 15, 39);
+  border-radius: 4px;
+  cursor: pointer;
+  margin-left: 118px;
+}
+#reset {
+  color: #fff;
+  background-color: rgb(233, 10, 10);
+  border-radius: 4px;
+  cursor: pointer;
+  margin-left: 276px;
+}
+
+.dataShow input {
+  pointer-events: none;
+}

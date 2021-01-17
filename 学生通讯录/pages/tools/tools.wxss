@@ -1,0 +1,14 @@
+/* pages/tools/tools.wxss */
+.background {
+  width: 100%;
+  height: 350rpx;
+  position:absolute; 
+  background-size:100% 100%;
+  z-index: -1;
+  filter: blur(2px);
+}
+.head{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}

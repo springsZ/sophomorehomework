@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Myeditor</title>
+    <link rel="stylesheet" href="css/editor.css">
+</head>
+
+<body>
+    <section class="editor">
+        <button class="make_pop" id="showHead">
+            <img src="images/addhead.png" alt="增加标题">
+            <div class="popup">
+                <div class="titles" data-id="formatBlock:h1" style="font-weight: bolder;">标题</div>
+                <div class="titles" data-id="formatBlock:h2" style="font-weight:bold">副标题</div>
+                <div class="titles" data-id="formatBlock:p">主体</div>
+                <div class="titles" data-id="formatBlock:h5">说明文字</div>
+            </div>
+        </button>
+        <button data-id="formatBlock:blockquote"><img src="images/quote.png" alt="引用" title="引用"></button>
+        <button data-id="bold"><img src="images/addBold.png" alt="加粗" title="加粗"></button>
+        <button data-id="italic"><img src="images/addItalic.png" alt="倾斜" title="倾斜"></button>
+        <button data-id="underline"><img src="images/addundline.png" alt="下划线" title="下划线"></button>
+        <button data-id="insertOrderedList"><img src="images/addorderlist.png" alt="有序列表" title="有序列表"></button>
+        <button data-id="insertUnorderedList"><img src="images/addnoneorderlist.png" alt="无序列表" title="无序列表"></button>
+        <button class="make_pop">
+            <img src="images/imag.png" alt="插入图片">
+            <div class="popup">
+                <label for="insertImg"><img src="images/insertimag.png" alt="">&nbsp; Insert
+                    image</label>
+                <input type="file" name="insertImg" hidden id="insertImg" accept=".gif,.jpg,.jpeg,.png">
+            </div>
+        </button>
+        <button id="insertLink"><img src="images/addLink.png" alt="插入链接" title="插入链接"></button>
+        <input id="colorSelect" data-cid="ForeColor:color" type="color" style="vertical-align: middle;">
+        <button onclick="clearContent()"><img src="images/delete.png" alt="清空" title="清空"></button>
+        <button class="make_pop">
+            <img src="images/save.png" alt="保存">
+            <div class="popup">
+                <div class="titles" onclick="printJS('textContent','html')">
+                    <img src="images/downLoad.png" alt=""> 打印或保存PDF</div>
+                <div class="titles" onclick="downLoad('html')"><img src="images/downLoad.png" alt="">
+                    保存为.HTML</div>
+                <div class="titles" onclick="downLoad('txt')"><img src="images/downLoad.png" alt="">
+                    保存为.txt</div>
+            </div>
+        </button>
+        <button id="search"><img src="images/search.png" alt="搜索" title="搜索"></button>
+    </section>
+    <div>
+        <div class="text-area w">
+            <div class="switch">
+
+                <label for="importfile" style="color: #888;"><img src="images/import.png" alt="">&nbsp;导入文本
+                </label>
+                <input type="file" name="importfile" hidden id="importfile" accept=".html,.md">
+
+                <ul style="text-align: center;">
+
+                    <li onclick="changeTheme('#fff','black')"><img src="images/sun.png" alt="">白天模式</li>
+                    <li onclick="changeTheme('#000','white')"><img src="images/moon.png" alt="">夜间模式</li>
+                </ul>
+                <ul style="text-align: center;">
+                    <li style=" cursor: pointer;"><span id="counter">0</span> </li>
+                </ul>
+            </div>
+            <div class="content">
+                <p class="black" id="textContent" contenteditable="true">请从这里开始&nbsp;📌</p>
+            </div>
+        </div>
+
+    </div>
+    <script src="js/write.js"></script>
+    <script src="https://printjs-4de6.kxcdn.com/print.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/jitbit/HtmlSanitizer@master/HtmlSanitizer.js"></script>
+</body>
+
+</html>

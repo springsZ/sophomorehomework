@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>生活计算</title>
+    <link rel="stylesheet" href="css/lifecalculator.css">
+</head>
+
+<body>
+    <div class="container">
+        <section id="lifeContent">
+            <h3>贷款计算器</h3>
+            <form>
+                <ul>
+                    <li class="ways">
+                        <label>还款方式</label>
+                        <select name="ways" id="backWays">
+                            <option value="">等额本息</option>
+                            <option value="">等额本金</option>
+                        </select>
+                    </li>
+                    <li class="years">
+                        <label for="years">贷款年限（年）</label>
+                        <input type="number" name="years" id="years" placeholder="请输入大于0的数字" value="" />
+                    </li>
+
+
+                    <li class="sum">
+                        <label>贷款金额（万元）</label>
+                        <input type="number" name="loanSum" id="loanSum" placeholder="请输入大于0的数字" value="" />
+                    </li>
+
+                    <li class="sum">
+                        <label>贷款利率（%）</label>
+                        <input type="number" name="loanRate" id="loanRate" placeholder="请输入大于0的数字" value="" />
+                    </li>
+                </ul>
+                <button id="calculate">计算</button>
+                <button id="reset">清零</button>
+            </form>
+            <ul class="dataShow">
+
+                <li>
+                    <label>月均还款（元）</label>
+                    <input type="text" name="monthBack" id="monthBack" />
+                </li>
+
+
+                <li>
+                    <label>利息总额（元）</label>
+                    <input type="text" name="rateSum" id="rateSum" />
+                </li>
+
+                <li>
+                    <label>还款总额（元）</label>
+                    <input type="text" name="backSum" id="backSum" />
+                    <button class="goBack"><a href="calculator.html">返回</a></button>
+                </li>
+            </ul>
+
+        </section>
+    </div>
+    <script src="js/lifecalculator.js"></script>
+</body>
+
+</html>

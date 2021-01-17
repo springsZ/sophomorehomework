@@ -1,0 +1,79 @@
+<!--pages/search/search.wxml-->
+<cu-custom bgColor="bg-blue light" isBack="{{true}}">
+  <view slot="backText">返回</view>
+  <view slot="content">搜索数据</view>
+</cu-custom>
+<view class="cu-bar bg-white search fixed" style="top:{{CustomBar}}px;">
+  <view class="search-form round">
+    <text class="cuIcon-search"></text>
+    <input type="text" placeholder="输入姓名，学号" confirm-type="search" bindinput="getinfo"></input>
+  </view>
+  <view class="action">
+    <button class="cu-btn bg-gradual-blue shadow-blur round" bindtap="search">搜索</button>
+  </view>
+</view>
+
+<block wx:for="{{srecords}}" wx:key='{{index}}' >
+    <view class="cu-list menu {{menuBorder?'sm-border':''}} card-menu margin-top" style="margin-top:100rpx">
+    <view class="cu-item  ">
+      <view class="content"  >
+        <view>
+         <text class="cuIcon-locationfill text-blue "></text>
+         <text class="text-blue  padding-left">学生{{index+1}} :</text>
+         
+         <view  class="padding-left-xl">
+
+<button class="cu-btn round bg-gradual-green margin-tb-sm lg shadow margin-right margin-left-xl" data-id="{{item.id}}" data-index="{{index}}" bindtap="change">修改</button>
+
+ <button class="cu-btn round bg-gradual-red margin-tb-sm lg shadow margin-left-xl" data-id="{{item.id}}" data-index="{{index}}" bindtap="delete">删除</button>
+</view>
+        </view>
+      </view>
+    </view>
+
+      <view class=" bg-white padding-left padding-bottom padding-top text-black "   >
+        <text class="text-grey padding-right " > 学号:</text> <text>{{item.id}}</text>
+      </view>
+
+       <view class=" bg-white padding-left text-black padding-bottom"   >
+        <text class="text-grey padding-right"> 学生姓名:</text>
+        <text>{{item.name}}</text>
+      </view>
+
+      <view class=" bg-white padding-left text-black padding-bottom"   >
+        <text class="text-grey padding-right"> 学生性别:</text>
+        <text>{{item.sex}}</text>
+      </view>
+
+       <view class=" bg-white padding-left text-black padding-bottom"   >
+        <text class="text-grey padding-right"> 学生年龄：</text>
+        <text>{{item.age}}</text>
+      </view>
+
+      <view class=" bg-white padding-left text-black padding-bottom"   >
+        <text class="text-grey padding-right"> 出生日期：</text>
+        <text>{{item.birthday}}</text>
+      </view>
+
+       <view class=" bg-white padding-left text-black padding-bottom"   >
+        <text class="text-grey padding-right">手机号码:</text>
+        <text class="text-blue"  bindtap="makecall" data-phone="{{item.phone}}">{{item.phone}}</text>
+      </view>
+
+      
+       <view class=" bg-white padding-left text-black padding-bottom"   >
+        <text class="text-grey padding-right"> 家庭住址：</text>
+        <text>{{item.address}}</text>
+      </view>
+      <view class=" bg-white padding-left text-black padding-bottom"   >
+        <text class="text-grey padding-right"> 电子邮箱：</text>
+        <text>{{item.mail}}</text>
+      </view>
+
+      <view class=" bg-white padding-left text-black padding-bottom "   >
+        <text class="text-grey padding-right"> 专业:</text> 
+        <text >{{item.department}}</text>
+      </view>
+     
+    </view>
+ </block>

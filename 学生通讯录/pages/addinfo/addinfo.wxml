@@ -1,0 +1,66 @@
+<!--pages/addinfo/addinfo.wxml-->
+<cu-custom bgColor="bg-blue light" isBack="{{true}}">
+  <view slot="backText">返回</view>
+  <view slot="content">{{topic}}</view>
+</cu-custom>
+<view class="cu-form-group margin-top">
+		<view class="title">姓名</view>
+		<input placeholder="请输入" value="{{name}}" bindinput="getName"></input>
+</view>
+<view class="cu-form-group">
+		<view class="title">学号</view>
+		<input placeholder="请输入" value="{{id}}" bindinput="getId"></input>
+</view>
+<view class="cu-form-group ">
+		<view class="title">性别</view>
+		<picker bindchange="PickerChange1" value="{{index}}" range="{{picker1}}">
+			<view class="picker">
+				{{sex}}
+			</view>
+		</picker>
+	</view>
+<view class="cu-form-group">
+		<view class="title">出生日期</view>
+		<picker mode="date" value="{{date}}" start="1949-09-01" end="2021-09-01" bindchange="DateChange">
+			<view class="picker">
+				{{date}}
+			</view>
+		</picker>
+	</view>
+<view class="cu-form-group">
+		<view class="title">年龄</view>
+		<input placeholder="请输入" value="{{age}}" bindinput="getAge"></input>
+</view>
+<view class="cu-form-group">
+		<view class="title">手机号码</view>
+		<input placeholder="输入框带标签" type="number" value="{{phone}}" bindinput="getPhone"></input>
+		<view class="cu-capsule radius">
+			<view class="cu-tag bg-blue">
+				+86
+			</view>
+			<view class="cu-tag line-blue">
+				中国大陆
+			</view>
+		</view>
+  </view>
+  <view class="cu-form-group">
+		<view class="title">地址选择</view>
+		<picker mode="region" bindchange="RegionChange" value="{{region}}" custom-item="{{customItem}}">
+			<view class="picker">
+				{{region[0]}}，{{region[1]}}，{{region[2]}}
+			</view>
+		</picker>
+	</view>
+<view class="cu-form-group">
+		<view class="title">邮箱</view>
+		<input placeholder="请输入" value="{{mail}}" bindinput="getMail" ></input>
+</view>
+<view class="cu-form-group ">
+		<view class="title">专业</view>
+		<picker bindchange="PickerChange2" value="{{index}}" range="{{picker2}}">
+			<view class="picker">
+				{{department}}
+			</view>
+		</picker>
+  </view>
+  <button class=" round bg-blue margin-tb-sm " bindtap="submit">提    交</button>

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>myCalculator</title>
+    <link rel="stylesheet" href="css/calculator.css">
+</head>
+
+<body>
+
+    <section class="whole">
+        <div id="historyContainer" style="z-index: -1;"></div>
+        <div class="valueShow">
+            <input type="text" name="" id="inputTop">
+            <input type="text" name="" id="inputBottom">
+        </div>
+        <div class="divider"></div>
+        <div class="numInput">
+            <div class="row">
+                <div data-set="7" class="num">7</div>
+                <div data-set="8" class="num">8</div>
+                <div data-set="9" class="num">9</div>
+                <div data-set="(" class="num">(</div>
+                <div data-set="/" class="opera">÷</div>
+            </div>
+
+            <div class="row">
+                <div data-set="4" class="num">4</div>
+                <div data-set="5" class="num">5</div>
+                <div data-set="6" class="num">6</div>
+                <div data-set=")" class="num">)</div>
+                <div data-set="*" class="opera">x</div>
+            </div>
+
+            <div class="row">
+                <div data-set="1" class="num">1</div>
+                <div data-set="2" class="num">2</div>
+                <div data-set="3" class="num">3</div>
+                <div id="reset">C</div>
+                <div data-set="-" class="opera">-</div>
+            </div>
+
+            <div class="row">
+
+                <div data-set="0" class="num">0</div>
+                <div data-set="00" class="num">00</div>
+                <div data-set="." class="num">.</div>
+                <div id="Del">Del</div>
+                <div data-set="+" class="opera">+</div>
+            </div>
+
+            <div class="row scienceList">
+                <div data-set="sin" class="opera">sin</div>
+                <div data-set="cos" class="opera">cos</div>
+                <div data-set="tan" class="opera">tan</div>
+                <div data-set="sqrt" class="opera">sqrt</div>
+                <div data-set="log" class="opera">log</div>
+
+            </div>
+
+            <div class="row scienceList">
+                <div data-set="arcsin" class="opera">arcsin</div>
+                <div data-set="arccos" class="opera">arccos</div>
+                <div data-set="arctan" class="opera">arctan</div>
+                <div data-set="abs" class="opera">|x|</div>
+                <div data-set="exp" class="opera">exp</div>
+
+            </div>
+
+            <div class="row">
+                <div id="equal" data-set="=">
+                    =
+                </div>
+                <div id="science">
+                    科学
+                </div>
+                <div id="life">
+                    <a href="lifeCalculator.html">贷款</a>
+                </div>
+                <div id="after">
+                    日期
+                </div>
+                <div id="records">
+                    历史
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <script src="js/calculator.js"></script>
+    <script src="js/gsap.min.js"></script>
+</body>
+
+</html>

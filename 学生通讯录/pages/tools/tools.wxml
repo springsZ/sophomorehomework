@@ -1,0 +1,76 @@
+<!--pages/tools/tools.wxml-->
+<cu-custom bgColor="bg-gradual-blue">
+  <view slot="content">功能中心</view>
+</cu-custom>
+
+<image class='background' src="../../images/bgin.png" mode="aspectFill"></image>
+<view class="head" bindtap="toLogin">
+ <image style="border-radius:50%; height:180rpx;width:180rpx; margin:10rpx" src="{{userinfo.avatarUrl ? userinfo.avatarUrl:'../../images/user.jpg'}}"></image>
+ <view class="text-xxl text-white margin-top padding-top" style="margin-bottom:5rpx " >学生通信录查询</view>
+ </view>
+
+ <view class="cu-modal {{modalName=='DialogModal'?'show':''}}">
+  <view class="cu-dialog">
+    <view class="cu-bar bg-white justify-end">
+      <view class="content">身份验证</view>
+      <view class="action" bindtap="hideModal">
+        <text class="cuIcon-close text-red"></text>
+      </view>
+    </view>
+    <view class="padding-xl bg-white">
+      <view class="cu-form-group">
+		<view class="title">{{Login}}</view>
+		<input placeholder="请输入" type="password" bindinput="getstring" value="{{str}}"></input>
+	</view>
+    </view>
+    <view class="cu-bar bg-white justify-end">
+      <view class="action">
+        <button class="cu-btn line-green text-green" bindtap="hideModal">取消</button>
+        <button class="cu-btn bg-green margin-left" bindtap="checked">确定</button>
+
+      </view>
+    </view>
+  </view>
+</view>
+
+    <view class="cu-list menu {{menuBorder?'sm-border':''}} card-menu margin-top padding-top" >
+      <view class="cu-item arrow" data-target="DialogModal" data-id="0" bindtap="showModal">
+      <view class="content">
+        <text class="cuIcon-settings text-blue "></text>
+         <text class="text-grey">身份验证</text>
+      </view>
+    </view>
+      <view class="cu-item arrow" bindtap="addNew">
+      <view class="content">
+        <text class="cuIcon-list text-blue "></text>
+         <text class="text-grey">新增学生信息</text>
+      </view>
+    </view>
+   
+    
+    
+
+
+    <view class="cu-item arrow" bindtap="gotosearch">
+      <view class="content">
+        <text class="cuIcon-copy text-blue "></text>
+         <text class="text-grey">搜索学生</text>
+      </view>
+    </view>
+
+    <view class="cu-item arrow" bindtap="gosort">
+      <view class="content">
+        <text class="cuIcon-favor text-blue "></text>
+         <text class="text-grey ">筛选学生信息</text>
+      </view>
+    </view>
+    
+    <view class="cu-item arrow" data-target="DialogModal" data-id="1"  bindtap="showModal">
+      <view class="content">
+        <text class="cuIcon-settings text-blue "></text>
+         <text class="text-grey">修改密码</text>
+      </view>
+    </view>
+    
+    
+    </view>

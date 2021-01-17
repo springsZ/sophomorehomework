@@ -1,0 +1,138 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Microsoft YaHei, Heiti SC, tahoma, arial, Hiragino Sans GB,
+    "\5B8B\4F53", sans-serif;
+}
+img {
+  vertical-align: middle;
+}
+a {
+  color: #000;
+}
+a:hover {
+  color: #888;
+}
+button {
+  display: inline-block;
+  height: 40px;
+  width: 40px;
+  outline: none !important;
+}
+.w {
+  width: 1200px;
+  margin: 100px auto;
+}
+.editor {
+  position: fixed;
+  top: 20px;
+  right: 160px;
+  height: 40px;
+  background-color: rgb(255, 255, 255);
+  box-shadow: 10px 10px 5px #888888;
+}
+
+.editor > button,
+.editor > input {
+  background-color: rgb(255, 255, 255);
+  border: none;
+  margin-right: 30px;
+  cursor: pointer;
+}
+.editor button:hover {
+  background-color: rgb(221, 220, 220);
+}
+
+.editor button:active {
+  background: #888;
+}
+.editor button img {
+  width: 25px;
+  height: 25px;
+}
+.make_pop {
+  position: relative;
+}
+
+.editor .popup {
+  display: none;
+  z-index: 1;
+  border-radius: 1px;
+  position: absolute;
+  top: 100%;
+  right: -253%;
+  padding-top: 10px;
+  width: 150px;
+  font-family: sans-serif;
+  cursor: pointer;
+  color: #888;
+  background-color: #fff;
+  box-shadow: 10px 10px 5px #888888;
+}
+.editor .make_pop:hover .popup {
+  display: block;
+}
+
+.editor .titles {
+  padding: 10px;
+}
+.editor .titles:hover {
+  background-color: #888;
+  color: #000;
+}
+.content {
+  height: 500px;
+  overflow: scroll;
+  overflow-x: hidden;
+}
+.content::-webkit-scrollbar {
+  /*滚动条整体样式*/
+  width: 8px; /*高宽分别对应横竖滚动条的尺寸*/
+  height: 4px;
+}
+.content::-webkit-scrollbar-thumb {
+  /*滚动条里面小方块*/
+  border-radius: 10px;
+  -webkit-box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2); /* 警告信息因为低版本浏览器兼容性问题 */
+  background: rgba(0, 0, 0, 0.2);
+}
+.content::-webkit-scrollbar-track {
+  /*滚动条里面轨道*/
+  -webkit-box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  background: rgba(0, 0, 0, 0.1);
+}
+
+#textContent {
+  padding-left: 20px;
+  height: 1000px;
+}
+.switch {
+  position: absolute;
+  top: 150px;
+  left: 50px;
+  display: inline-block;
+  width: 45px;
+  height: 24px;
+  margin: 16px;
+  margin: 20px 10px 20px 15px;
+  cursor: pointer;
+}
+.switch ul {
+  list-style: none;
+}
+.switch img {
+  width: 40px;
+  height: 40px;
+}
+.switch ul li {
+  margin-top: 30px;
+  color: #888888;
+}
+.white {
+  color: #fff;
+}
+.black {
+  color: #000;
+}

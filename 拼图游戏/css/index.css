@@ -1,0 +1,136 @@
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  outline: 0;
+}
+html,
+body {
+  height: 100%;
+  height: 100%;
+}
+.container {
+  padding: 120px 0;
+}
+.dSelect {
+  margin: 0 auto;
+  width: 600px;
+  text-align: center;
+}
+.dSelect .selectbox {
+  display: inline-block;
+  vertical-align: top;
+}
+.dSelect .selectbox {
+  display: inline-block;
+  position: relative;
+  width: 120px;
+}
+.dSelect .selectbox .text {
+  width: 100%;
+  height: 40px;
+  text-align: center;
+  border: 0;
+  background: #ececec;
+  border-radius: 5px;
+  display: block;
+  line-height: 40px;
+  color: #3f3f3f;
+  cursor: pointer;
+  font-size: 16px;
+  transition: all ease 0.2s;
+}
+.dSelect .selectbox .text:hover {
+  background: #e4e4e4;
+}
+.dSelect .selectbox .box {
+  position: absolute;
+  width: 100%;
+  padding: 5px 0;
+  background: #ececec;
+  color: #666;
+  border-radius: 5px;
+  z-index: 10000;
+  margin-top: 5px;
+  display: none;
+  font-size: 14px;
+}
+.dSelect .selectbox .box li {
+  width: 100%;
+  height: 30px;
+  text-align: center;
+  line-height: 30px;
+  transition: all ease 0.2s;
+  cursor: pointer;
+}
+.dSelect .selectbox .box li:hover {
+  background: #0adaff;
+  color: #fff;
+}
+.dSelect .selectbox.active .text {
+  background: #490add;
+  color: #fff;
+}
+.dSelect .btn {
+  width: 120px;
+  border: 0;
+  background: #32e60e;
+  color: #fff;
+  border-radius: 5px;
+  height: 40px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-right: 10px;
+}
+.dSelect .btn:hover {
+  background: #d4e208;
+}
+.picContainer {
+  text-align: center;
+  margin-top: 30px;
+}
+.picContainer .list {
+  display: inline-block;
+  width: 600px;
+  height: 600px;
+  position: relative;
+}
+.picContainer .list li {
+  position: absolute;
+  overflow: hidden;
+  border-radius: 0;
+  background-image: url(bfe.jpeg);
+  box-shadow: 0 0 6px rgba(255, 255, 255, 0.6);
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.make_pop img {
+  width: 50px;
+  height: 50px;
+}
+.make_pop {
+  position: relative;
+  margin-top: 10px;
+  margin-left: 350px;
+  background-color: transparent;
+}
+
+.popup {
+  display: none;
+  z-index: 1;
+  border-radius: 1px;
+  position: absolute;
+  top: 100%;
+  right: -253%;
+  padding-top: 10px;
+  width: 150px;
+  font-family: sans-serif;
+  cursor: pointer;
+  color: #888;
+  background-color: #fff;
+  box-shadow: 10px 10px 5px #888888;
+}
+.make_pop:hover .popup {
+  display: block;
+}

@@ -1,0 +1,117 @@
+<!--pages/sort/sort.wxml-->
+<cu-custom bgColor="bg-blue light" isBack="{{true}}">
+  <view slot="backText">返回</view>
+  <view slot="content">筛选数据</view>
+</cu-custom>
+
+<view>
+  <view class="cu-form-group ">
+		<view class="title">筛选类别</view>
+		<picker bindchange="PickerChange1" value="{{index}}" range="{{picker1}}">
+			<view class="picker">
+				{{class}}
+			</view>
+		</picker>
+  </view>
+
+  <block wx:if="{{sindex==0}}">
+    <view class="cu-form-group">
+		<view class="title">专业选择</view>
+    <picker bindchange="dPickerChange" value="{{index}}" range="{{dpicker}}">
+			<view class="picker">
+				{{content}}
+			</view>
+    </picker>
+   </view>
+  </block>
+   
+  <block wx:elif="{{sindex==1}}">
+    <view class="cu-form-group">
+		<view class="title">性别选择</view>
+    <picker bindchange="sPickerChange" value="{{index}}" range="{{spicker}}">
+			<view class="picker">
+				{{content}}
+			</view>
+    </picker>
+  </view>
+  </block>
+
+  <block wx:elif="{{sindex==2}}">
+  <view class="cu-form-group">
+		<view class="title">地址选择</view>
+		<picker mode="region" bindchange="RegionChange" value="{{region}}" custom-item="{{customItem}}">
+			<view class="picker">
+				{{region[0]}}，{{region[1]}}，{{region[2]}}
+			</view>
+		</picker>
+	</view>
+</block>
+
+ 
+</view>
+
+
+<block wx:for="{{srecords}}" wx:key='{{index}}' >
+    <view class="cu-list menu {{menuBorder?'sm-border':''}} card-menu margin-top" style="margin-top:50rpx">
+    <view class="cu-item  ">
+      <view class="content"  >
+        <view>
+         <text class="cuIcon-locationfill text-blue "></text>
+         <text class="text-blue  padding-left">学生{{index+1}} :</text>
+         
+         <view  class="padding-left-xl">
+
+<button class="cu-btn round bg-gradual-green margin-tb-sm lg shadow margin-right margin-left-xl" data-id="{{item.id}}" data-index="{{index}}" bindtap="change">修改</button>
+
+ <button class="cu-btn round bg-gradual-red margin-tb-sm lg shadow margin-left-xl" data-id="{{item.id}}" data-index="{{index}}" bindtap="delete">删除</button>
+</view>
+        </view>
+      </view>
+    </view>
+
+      <view class=" bg-white padding-left padding-bottom padding-top text-black "   >
+        <text class="text-grey padding-right " > 学号:</text> <text>{{item.id}}</text>
+      </view>
+
+       <view class=" bg-white padding-left text-black padding-bottom"   >
+        <text class="text-grey padding-right"> 学生姓名:</text>
+        <text>{{item.name}}</text>
+      </view>
+
+      <view class=" bg-white padding-left text-black padding-bottom"   >
+        <text class="text-grey padding-right"> 学生性别:</text>
+        <text>{{item.sex}}</text>
+      </view>
+
+       <view class=" bg-white padding-left text-black padding-bottom"   >
+        <text class="text-grey padding-right"> 学生年龄：</text>
+        <text>{{item.age}}</text>
+      </view>
+
+      <view class=" bg-white padding-left text-black padding-bottom"   >
+        <text class="text-grey padding-right"> 出生日期：</text>
+        <text>{{item.birthday}}</text>
+      </view>
+
+       <view class=" bg-white padding-left text-black padding-bottom"   >
+        <text class="text-grey padding-right">手机号码:</text>
+        <text class="text-blue"  bindtap="makecall" data-phone="{{item.phone}}">{{item.phone}}</text>
+      </view>
+
+      
+       <view class=" bg-white padding-left text-black padding-bottom"   >
+        <text class="text-grey padding-right"> 家庭住址：</text>
+        <text>{{item.address}}</text>
+      </view>
+      <view class=" bg-white padding-left text-black padding-bottom"   >
+        <text class="text-grey padding-right"> 电子邮箱：</text>
+        <text>{{item.mail}}</text>
+      </view>
+
+      <view class=" bg-white padding-left text-black padding-bottom "   >
+        <text class="text-grey padding-right"> 专业:</text> 
+        <text >{{item.department}}</text>
+      </view>
+     
+    </view>
+ </block>

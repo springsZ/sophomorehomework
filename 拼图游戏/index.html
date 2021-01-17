@@ -1,0 +1,47 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>拼图游戏</title>
+    <link rel="stylesheet" href="css/index.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <button class="make_pop">
+            <img src="images/imag.png" alt="选择图片">
+            <div class="popup">
+                <label for="insertImg"><img src="images/insertimag.png" alt="">&nbsp; 选择您喜爱的图片</label>
+                <input type="file" name="insertImg" hidden id="insertImg" accept=".gif,.jpg,.jpeg,.png">
+            </div>
+        </button>
+        <div class="dSelect">
+            <button class="btn" type="button">开始</button>
+            <div class="selectbox">
+                <button class="text">简单</button>
+                <ul class="box">
+                    <li>简单</li>
+                    <li>入门</li>
+                    <li>中等</li>
+                    <li>高难</li>
+                    <li>挑战</li>
+                </ul>
+            </div>
+        </div>
+        <div style="text-align: center;">
+            <div id="timer" style="color:red"></div>
+            <div id="warring" style="color:red"></div>
+        </div>
+        <div class="picContainer">
+            <ul class="list" id="content"></ul>
+        </div>
+    </div>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/index.js"></script>
+</body>
+
+</html>

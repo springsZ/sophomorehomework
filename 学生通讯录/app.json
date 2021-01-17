@@ -1,0 +1,36 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/tools/tools",
+    "pages/search/search",
+    "pages/sort/sort",
+    "pages/addinfo/addinfo"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "ColorUI",
+    "navigationStyle": "custom",
+    "navigationBarTextStyle": "white"
+  },
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "通讯首页",
+        "iconPath": "images/index-unclicked.png",
+        "selectedIconPath": "images/index.png"
+      },
+      {
+        "pagePath": "pages/tools/tools",
+        "text": "功能",
+        "iconPath": "images/tools-unclicked.png",
+        "selectedIconPath": "images/tools.png"
+      }
+    ]
+  },
+  "usingComponents": {
+    "cu-custom": "/colorui/components/cu-custom"
+  },
+  "sitemapLocation": "sitemap.json"
+}
